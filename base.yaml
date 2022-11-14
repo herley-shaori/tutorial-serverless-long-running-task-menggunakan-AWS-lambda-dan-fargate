@@ -1,0 +1,23 @@
+Resources:
+  S3Source:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: random-string-source
+  S3Destination:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: random-string-destination
+  ECRRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: random-string-image
+
+Outputs:
+  S3SourceOutput:
+    Value: !Ref S3Source
+  S3DestinationOutput:
+    Value: !Ref S3Destination
+  ECRRepositoryOutput:
+    Value: !Ref ECRRepository
+    Export:
+      Name: random-string-ecr

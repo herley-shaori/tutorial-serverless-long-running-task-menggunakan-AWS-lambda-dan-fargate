@@ -1,0 +1,1 @@
+aws cloudformation create-stack --stack-name belajar --template-body file://base.yaml --capabilities CAPABILITY_NAMED_IAM
